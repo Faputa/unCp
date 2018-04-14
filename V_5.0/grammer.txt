@@ -1,0 +1,34 @@
+prog    ->   { stmt }
+
+stmt    ->   epxr;
+        ->   int expr;
+        ->   if (expr) stmt
+        ->   if (expr) stmt else stmt
+        ->   while (expr) stmt
+        ->   { stmt }
+
+expr    ->   expr = expr'
+
+expr'   ->   expr' && expr''
+        ->   expr' || expr''
+
+expr''  ->   expr'' == relterm
+	->   expr'' <  relterm
+	->   expr'' >  relterm
+
+relterm ->   relterm + numterm
+	->   relterm - numterm
+
+numterm ->   numterm * value
+	->   numterm / value
+
+value   ->   ( expr )
+        ->   ++fact
+        ->   --fact
+
+fact    ->   fact.sin
+        ->   sin
+
+sin	->   id
+        ->   num
+	->   id[fact]

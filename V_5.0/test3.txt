@@ -1,0 +1,19 @@
+struct Array
+{
+    int arr[2][3][4];
+};
+
+void main()
+{
+    struct Array A;
+    int i, j, k;
+    for (i = 0 ;i < 2; ++i)
+        for (j = 0; j < 3; ++j)
+            for (k = 0; k < 4; ++k)
+            A.arr[i][j][k] = (i + 1) * (j + 2) + k + 3;
+    for (i = 0 ; i < 2; ++i)
+        for (j = 0; j < 3; ++j) {
+            for (k = 0; k < 4; ++k)
+                printf("i = %d  j = %d  %2d\n", i, j, A.arr[i][j][k + 1]);
+        }
+}

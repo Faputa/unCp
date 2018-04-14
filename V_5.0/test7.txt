@@ -1,0 +1,20 @@
+void fun(int a, int b)
+{
+	if (a < b) return ;
+	else {
+		printf("a = %d\n", a);
+		--a;
+		fun(a, b);
+		return ;
+	}
+}
+
+void main()
+{
+	int a, b;
+	a = 10;
+	b = 1;
+	printf("function begin\n");
+	fun(a, b);
+	printf("function over\n");
+}

@@ -1,0 +1,21 @@
+void main()
+{
+    int a, b, c, d;
+    a = 1;
+    b = 2;
+    c = a + b;
+    d = 4;
+    if      ((a < 1 && b > 3) || c == 3) {
+        ++a;
+        printf("a = %d", a);
+    } else if (a < 0 && c < 1) {
+        ++b;
+        printf("b = %d", b);
+    } else if (a < 3 && b > 3) {
+        ++c;
+        printf("c = %d", c);
+    } else if ((a + b) == c && d < 5) {
+        ++d;
+        printf("d = %d", d);
+    }
+}
